@@ -46,5 +46,6 @@ def solution(absolutes, signs):
 solution([4, 7, 12], [True, False, True])
 
 
-def solution(absolutes, signs):
-    return sum(absolutes if sign else -absolutes for absolutes, sign in zip(absolutes, signs))
+# # Alternative Code
+# def solution(absolutes, signs):
+#     return sum(absolutes if sign else -absolutes for absolutes, sign in zip(absolutes, signs))
