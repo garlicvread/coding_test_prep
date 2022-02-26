@@ -5,7 +5,7 @@ Receiving an ID input, then recommend a similar ID to the user.
 
 ID Creation Rules:
 - 3 <= The length of ID <= 15.
-- An ID consists of lower case letters, numbers, "-", "." only.
+- An ID consists of lower case letters, numbers, "-", "_", "." only.
 - The period "." cannot be used at the first or last position.
 
 
