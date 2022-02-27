@@ -6,7 +6,7 @@ A parameter "sings" contains the signs of the integers as boolean values.
 You need to calculate the actual sum of the integers with the solution function.
 
 
-Conditions:
+Constraints:
 1. 1 <= The length of absolutes <= 1000
 2. The length of signs == the length of absolutes.
 3. When signs[i] are True, then the actual value of absolutes[i] are positive integers and vice versa.
