@@ -5,7 +5,7 @@ An integer array "numbers" that includes some random integers from 0 to 9 is giv
 Sum all the missing numbers from the array, and return it.
 
 
-Conditions:
+Constraints:
 - 1 ≤ length of "numbers" ≤ 9
 - 0 ≤ each element of "numbers" ≤ 9
 - The elements of "numbers" are different from each other.
