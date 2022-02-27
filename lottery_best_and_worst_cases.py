@@ -32,7 +32,7 @@ win_nums: the winning numbers.
 The output should include the best possible position and the worst possible position in the order.
 
 
-Limitations:
+Constraints:
 - lottos: An int array. The length of lottos is 6.
 - All elements of lottos have a range between 0 and 45.
 - 0 is the erased number.
