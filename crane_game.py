@@ -69,7 +69,7 @@ Parameters
 - return: The number of numbers that were deleted until the game is over.
 
 
-Conditions
+Constraints:
 - 5 * 5 <= The size of the "board" array <= 30 * 30
 - 0 <= The elements of "board" array <= 100: all elements are integers.
 - 0 in "board" array means the grid is empty.
