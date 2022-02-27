@@ -49,7 +49,7 @@ the new_id will be transformed as follows.
 With this process, when a new_id "...!@BaT#*..y.abcdefghijklm" is inputted, it turns into "bat.y.abcdefghi".
 
 
-Conditions:
+Constraints:
 - 1 <= The length of new_id <= 1000 and the new_id is a string.
 - new_id consists of upper case letters, lower case letters, numbers, and special characters.
 - The special characters in new_id is limited into "-_.~!@#$%^&*()=+[{]}:?,<>/".
