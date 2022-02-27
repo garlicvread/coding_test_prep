@@ -12,7 +12,7 @@ when picking up random three numbers and adding them together from the array "nu
 Return the number of possible prime numbers.
 
 
-Conditions:
+Constraints:
 1. 3 <= The number of elements in nums <= 50
 2. 1 <= Each element of nums <= 1000
 3. Each element of nums is a natural number.
