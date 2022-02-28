@@ -109,7 +109,7 @@ def store_to_storage(board, moves):
 
 def delete_duplicates(list):
     """
-    :param list: the inpuit you need to delete the duplicates.
+    :param list: the input you need to delete the duplicates.
     :return: the number of deleted elements.
     """
     temp = []
