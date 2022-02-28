@@ -152,7 +152,7 @@ def solution(numbers, hand):
                             print("DISTANCE:", distance, "\n")
 
     answer = "".join(answer)
-    print(answer)
+    print("ANSWER:", answer)
     return answer
 
 
