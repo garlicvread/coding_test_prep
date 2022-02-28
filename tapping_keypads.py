@@ -97,14 +97,14 @@ def solution(numbers, hand):
         for j in range(len(numpads)):
             for k in range(len(numpads[j])):
                 if numbers[i] == numpads[j][k]:
-                    # print(numpads[j][k], " - ", j + 1, "행", k + 1, "열")
+                    print(numpads[j][k], " - ", j + 1, "행", k + 1, "열")
 
                     current_position.append([j, k])
                     count += 1
 
-                    # print("STEP:", count)
-                    # print("POS:", current_position)
-                    # print("CURR:", current_position[-1])
+                    print("STEP:", count)
+                    print("POS:", current_position)
+                    print("CURR:", current_position[-1])
 
                     l_distance = abs(current_left_thumb[0] - current_position[-1][0]) + \
                                  abs(current_left_thumb[1] - current_position[-1][1])
@@ -114,45 +114,45 @@ def solution(numbers, hand):
 
                     if numbers[i] in [1, 4, 7]:
                         current_left_thumb = current_position[-1]
-                        # distance = l_distance
+                        distance = l_distance  # There's no need to calculate the distance in this stage.
                         answer.extend("L")
-                        # print("answer", answer, " '1' ")
-                        # print("DISTANCE:", distance, "\n")
+                        print("answer", answer, " '1' ")
+                        print("DISTANCE:", distance, "\n")
                     elif numbers[i] in [3, 6, 9]:
                         current_right_thumb = current_position[-1]
-                        # distance = r_distance
+                        distance = r_distance  # There's no need to calculate the distance in this stage.
                         answer.extend("R")
-                        # print("answer", answer, " '2' ")
-                        # print("DISTANCE:", distance, "\n")
+                        print("answer", answer, " '2' ")
+                        print("DISTANCE:", distance, "\n")
                     else:
                         if l_distance == r_distance:
                             if hand == "right":
                                 current_right_thumb = current_position[-1]
                                 distance = r_distance
                                 answer.extend("R")
-                                # print("answer", answer, " '3' ")
-                                # print("DISTANCE:", distance, "\n")
+                                print("answer", answer, " '3' ")
+                                print("DISTANCE:", distance, "\n")
                             else:
                                 current_left_thumb = current_position[-1]
                                 distance = l_distance
                                 answer.extend("L")
-                                # print("answer", answer, " '4' ")
-                                # print("DISTANCE:", distance, "\n")
+                                print("answer", answer, " '4' ")
+                                print("DISTANCE:", distance, "\n")
                         elif l_distance < r_distance:
                             current_left_thumb = current_position[-1]
                             distance = l_distance
                             answer.extend("L")
-                            # print("answer", answer, " '5' ")
-                            # print("DISTANCE:", distance, "\n")
+                            print("answer", answer, " '5' ")
+                            print("DISTANCE:", distance, "\n")
                         else:
                             current_right_thumb = current_position[-1]
                             distance = r_distance
                             answer.extend("R")
-                            # print("answer", answer, " '6' ")
-                            # print("DISTANCE:", distance, "\n")
+                            print("answer", answer, " '6' ")
+                            print("DISTANCE:", distance, "\n")
 
     answer = "".join(answer)
-    # print(answer)
+    print(answer)
     return answer
 
 
