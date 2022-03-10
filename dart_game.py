@@ -27,13 +27,13 @@ A string that consists of three of the score/bonus/option combination.
 
 Examples
 No  dartResult	answer	Explanation
- 1. 1S2D*3T    37       1^1 * 2 + 2^2 * 2 + 3^3
- 2. 1D2S#10S.   9       1^2 + 2^1 * (-1) + 10^1
- 3. 1D2S0T.     3       1^2 + 2^1 + 0^3
- 4. 1S*2T*3S.  23       1^1 * 2 * 2 + 2^3 * 2 + 3^1
- 5. 1D#2S*3S    5       1^2 * (-1) * 2 + 2^1 * 2 + 3^1
- 6. 1T2D3D#.   -4       1^3 + 2^2 + 3^2 * (-1)
- 7. 1D2S3T*.   59       1^2 + 2^1 * 2 + 3^3 * 2
+ 1. 1S2D*3T     37      1^1 * 2 + 2^2 * 2 + 3^3
+ 2. 1D2S#10S.    9      1^2 + 2^1 * (-1) + 10^1
+ 3. 1D2S0T.      3      1^2 + 2^1 + 0^3
+ 4. 1S*2T*3S.   23      1^1 * 2 * 2 + 2^3 * 2 + 3^1
+ 5. 1D#2S*3S     5      1^2 * (-1) * 2 + 2^1 * 2 + 3^1
+ 6. 1T2D3D#.    -4      1^3 + 2^2 + 3^2 * (-1)
+ 7. 1D2S3T*.    59      1^2 + 2^1 * 2 + 3^3 * 2
 """
 
 
@@ -62,6 +62,26 @@ def solution(dartResult):
                 scores_stack.append(curr_score * options[i])
 
     return sum(scores_stack)
+
+
+# # Alternative Code
+# import re
+#
+#
+# def solution(dartResult):
+#     bonus = {'S': 1, 'D': 2, 'T': 3}
+#     option = {'': 1, '*': 2, '#': -1}
+#     p = re.compile('(\d+)([SDT])([*#]?)')
+#     dart = p.findall(dartResult)
+#
+#     for i in range(len(dart)):
+#         if dart[i][2] == '*' and i > 0:
+#             dart[i-1] *= 2
+#         dart[i] = int(dart[i][0]) ** bonus[dart[i][1]] * option[dart[i][2]]
+#
+#     answer = sum(dart)
+#
+#     return answer
 
 
 print(solution("1S2D*3T"))
