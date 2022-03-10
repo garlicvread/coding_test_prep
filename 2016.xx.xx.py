@@ -1,4 +1,6 @@
 """
+Original Test Question: https://programmers.co.kr/learn/courses/30/lessons/12901
+
 2016.01.01 is Friday.
 Then, what is the date of 2016.a.b?
 

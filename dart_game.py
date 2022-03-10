@@ -1,5 +1,5 @@
 """
-DART GAME
+DART GAME: https://programmers.co.kr/learn/courses/30/lessons/17682
 
 The score calculation logic follows below.
 
