@@ -30,6 +30,20 @@ def solution(s):
     return answer
 
 
-# # Alternative Solution
+# # Alternative Solution 1
 # def solution(s):
 #     return s[(len(s) - 1) // 2 : len(s) // 2 + 1]
+#
+#
+# # Alternative Solution 2
+# def string_middle(str):
+#     a = len(str)
+#     if a % 2 == 0:
+#         a = (a-2) / 2
+#     else :
+#         a = (a-1) / 2
+#     return str[int(a): -int(a)]
+#
+#
+# # Alternative Solution 3
+# solution = lambda s: s[(len(s) - 1) // 2 : len(s) // 2 + 1]
