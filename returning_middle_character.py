@@ -28,3 +28,8 @@ def solution(s):
     else:
         answer = s[len(s) // 2]
     return answer
+
+
+# # Alternative Solution
+# def solution(s):
+#     return s[(len(s) - 1) // 2 : len(s) // 2 + 1]
