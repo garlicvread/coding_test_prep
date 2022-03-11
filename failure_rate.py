@@ -53,7 +53,7 @@ Thus, the return value is [3, 4, 2, 1, 5]
 
 
 For case 2
-All players are staying at the last stage, thus the failure rate is 1.
+All players are staying at the last stage, thus the failure rate is 1.R
 The rest of the stages are the same which is 0.
 The return value is [4, 1, 2, 3]
 """
@@ -72,17 +72,14 @@ def solution(N, stages):
                     players_at[j] += 1
                 else:
                     players_at[j] = 1
-    # print("players_at: ", players_at)
 
     # If a certain stage does not exist, add the stage number as the key and 0 as the value.
     for i in range(1, N + 1):
         if i not in players_at:
             players_at[i] = 0
-    # print("modified players_at:", players_at)
 
     # Sort players_at dictionary by the key.
     sorted_players_at = sorted(players_at.items(), key=lambda x: x[0])
-    # print("sorted players_at:", sorted_players_at)
 
     # Fill the dividers
     for i in range(len(sorted_players_at)):
@@ -91,8 +88,6 @@ def solution(N, stages):
         else:
             dividers.append(dividers[-1] - sorted_players_at[i - 1][1])
 
-    # print("dividers:", dividers)
-
     # Calculate the failure rate
     for i in range(len(sorted_players_at)):
         try:
@@ -100,11 +95,8 @@ def solution(N, stages):
         except ZeroDivisionError:
             failure_rate[sorted_players_at[i][0]] = 0
 
-    # print("failure_rate:", failure_rate)
-
     # Sort failure_rate dictionary by the value.
     sorted_failure_rate = sorted(failure_rate.items(), key=lambda x: x[1], reverse=True)
-    # print("sorted_failure_rate:", sorted_failure_rate)
 
     # Store the keys to answer.
     for i in range(len(sorted_failure_rate)):
@@ -127,16 +119,19 @@ def solution(N, stages):
 #     return sorted(result, key=lambda x : result[x], reverse=True)
 
 
-# # Alternative solution 2
+# Alternative solution 2
 # def solution(N, stages):
 #     fail = {}
-#     for i in range(1,N+1):
+#
+#     for i in range(1, N + 1):
 #         try:
-#             fail_ = len([a for a in stages if a==i])/len([a for a in stages if a>=i])
+#             fail_ = len([a for a in stages if a == i]) / len([a for a in stages if a >= i])
 #         except:
 #             fail_ = 0
-#         fail[i]=fail_
+#         fail[i] = fail_
+#
 #     answer = sorted(fail, key=fail.get, reverse=True)
+#
 #     return answer
 
 
